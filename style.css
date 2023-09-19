@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #f9f9f9;
+}
+
+.calculator {
+    width: 400px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.display {
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.result {
+    font-size: 60px;
+    color: #444;
+    line-height: 1;
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.history {
+    font-size: 20px;
+    color: #888;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fff;
+    background: #444;
+    margin: 10px;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+button:hover {
+    background: #222;
+}
+
+.number {
+    background: #999;
+}
+
+.operator {
+    background: #888;
+}
+
+.equal {
+    background: #27ae60;
+    font-size: 32px;
+}
+
+.clear {
+    background: #ecf0f1;
+    color: #777;
+}
+
+@media screen and (max-width: 500px) {
+    .calculator {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .buttons {
+        flex-wrap: nowrap;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .result {
+        font-size: 40px;
+    }
+
+    .history {
+        font-size: 16px;
+    }
+}
